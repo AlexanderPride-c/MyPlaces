@@ -12,7 +12,7 @@
             <objects>
                 <tableViewController id="upb-au-hIp" customClass="NewPlaceViewController" customModule="MyPlaces" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="do1-ZF-e6E">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <inset key="separatorInset" minX="15" minY="0.0" maxX="16" maxY="0.0"/>
@@ -198,7 +198,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s1a-VY-3EW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="Rhf-Vf-XzH" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1277" y="138"/>
+            <point key="canvasLocation" x="1276.8115942028987" y="137.94642857142856"/>
         </scene>
         <!--My Places-->
         <scene sceneID="3uE-fh-f6Z">
@@ -227,39 +227,59 @@
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="vGg-fA-TO1">
-                                                    <rect key="frame" x="96" y="8" width="302" height="69"/>
+                                                    <rect key="frame" x="96" y="8" width="208" height="69"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bdg-Gc-yTb">
-                                                            <rect key="frame" x="0.0" y="0.0" width="302" height="24"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="208" height="24"/>
                                                             <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="18"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BP9-Mj-xcv">
-                                                            <rect key="frame" x="0.0" y="27" width="302" height="20.5"/>
+                                                            <rect key="frame" x="0.0" y="27" width="208" height="20.5"/>
                                                             <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Vj-rf-tYM">
-                                                            <rect key="frame" x="0.0" y="50.5" width="302" height="18.5"/>
+                                                            <rect key="frame" x="0.0" y="50.5" width="208" height="18.5"/>
                                                             <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="13"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                 </stackView>
+                                                <view contentMode="scaleToFill" placeholderIntrinsicWidth="90" placeholderIntrinsicHeight="14" translatesAutoresizingMaskIntoConstraints="NO" id="Si9-zh-X7q" customClass="CosmosView" customModule="Cosmos">
+                                                    <rect key="frame" x="312" y="35.5" width="90" height="14"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="90" id="585-Mp-qgE"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                                            <real key="value" value="14"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="image" keyPath="filledImage" value="filledStar"/>
+                                                        <userDefinedRuntimeAttribute type="image" keyPath="emptyImage" value="emptyStar"/>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="fillMode">
+                                                            <integer key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="0zB-ep-3ht" firstAttribute="centerY" secondItem="syz-Hl-PJd" secondAttribute="centerY" id="K9A-nR-dO0"/>
                                                 <constraint firstItem="vGg-fA-TO1" firstAttribute="leading" secondItem="0zB-ep-3ht" secondAttribute="trailing" constant="16" id="LMF-KM-S7U"/>
+                                                <constraint firstItem="Si9-zh-X7q" firstAttribute="centerY" secondItem="syz-Hl-PJd" secondAttribute="centerY" id="MTF-qo-h0R"/>
                                                 <constraint firstItem="vGg-fA-TO1" firstAttribute="top" secondItem="syz-Hl-PJd" secondAttribute="top" constant="8" id="NNH-mO-9qD"/>
+                                                <constraint firstItem="Si9-zh-X7q" firstAttribute="trailing" secondItem="syz-Hl-PJd" secondAttribute="trailingMargin" constant="8" id="Np7-f2-9Hp"/>
+                                                <constraint firstItem="Si9-zh-X7q" firstAttribute="leading" secondItem="vGg-fA-TO1" secondAttribute="trailing" constant="8" id="VPA-wy-r2u"/>
                                                 <constraint firstAttribute="bottom" secondItem="vGg-fA-TO1" secondAttribute="bottom" constant="8" id="WTs-Pn-vwn"/>
-                                                <constraint firstAttribute="trailing" secondItem="vGg-fA-TO1" secondAttribute="trailing" constant="16" id="YsT-pY-Hix"/>
                                                 <constraint firstItem="0zB-ep-3ht" firstAttribute="leading" secondItem="syz-Hl-PJd" secondAttribute="leading" constant="15" id="fgk-ca-WmE"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="cosmosView" destination="Si9-zh-X7q" id="5HZ-n6-qYs"/>
                                             <outlet property="imageOfPlace" destination="0zB-ep-3ht" id="nch-6k-KX5"/>
                                             <outlet property="locationLabel" destination="BP9-Mj-xcv" id="hSi-IH-9E8"/>
                                             <outlet property="nameLabel" destination="Bdg-Gc-yTb" id="hP3-Ei-d4Z"/>
@@ -360,10 +380,12 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ZwB-6z-VEv"/>
+        <segue reference="8px-2K-qum"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="AZ" width="25" height="24"/>
         <image name="Photo" width="195" height="196"/>
+        <image name="emptyStar" width="255" height="256"/>
+        <image name="filledStar" width="237.5" height="238"/>
     </resources>
 </document>
