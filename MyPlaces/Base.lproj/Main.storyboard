@@ -281,7 +281,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="k4a-30-s5G">
                             <connections>
-                                <segue destination="ScY-gf-eXV" kind="presentation" id="l4A-cw-T1L"/>
+                                <segue destination="ScY-gf-eXV" kind="presentation" modalTransitionStyle="flipHorizontal" id="l4A-cw-T1L"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
