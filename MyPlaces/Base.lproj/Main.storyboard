@@ -12,7 +12,7 @@
             <objects>
                 <tableViewController id="upb-au-hIp" customClass="NewPlaceViewController" customModule="MyPlaces" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="do1-ZF-e6E">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <inset key="separatorInset" minX="15" minY="0.0" maxX="16" maxY="0.0"/>
@@ -191,6 +191,7 @@
                         <outlet property="placeLocation" destination="AcG-D4-Dmc" id="cbc-FP-VIK"/>
                         <outlet property="placeName" destination="xQt-vM-huR" id="cFh-bE-qvt"/>
                         <outlet property="placeType" destination="DpQ-AJ-lAT" id="dxt-HV-3vL"/>
+                        <outlet property="ratingControl" destination="N3e-Id-hWi" id="t1v-WM-Pq9"/>
                         <outlet property="saveButton" destination="p7d-Bd-0XQ" id="trS-sw-pDP"/>
                     </connections>
                 </tableViewController>
@@ -359,7 +360,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="8px-2K-qum"/>
+        <segue reference="ZwB-6z-VEv"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="AZ" width="25" height="24"/>
