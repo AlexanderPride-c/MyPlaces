@@ -248,6 +248,17 @@
                                     <action selector="closeVC" destination="MMA-9w-o3d" eventType="touchUpInside" id="tmX-yk-pDd"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kpY-sv-kLI">
+                                <rect key="frame" x="344" y="692" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="2Qr-2D-goE"/>
+                                    <constraint firstAttribute="height" constant="30" id="fg5-0c-miI"/>
+                                </constraints>
+                                <state key="normal" image="Location"/>
+                                <connections>
+                                    <action selector="centerViewInUserLocation" destination="MMA-9w-o3d" eventType="touchUpInside" id="PSR-Ek-gop"/>
+                                </connections>
+                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pin" translatesAutoresizingMaskIntoConstraints="NO" id="jzU-rx-HEA">
                                 <rect key="frame" x="187" y="408" width="40" height="40"/>
                                 <constraints>
@@ -271,15 +282,15 @@
                                     <action selector="doneButtonPressed" destination="MMA-9w-o3d" eventType="touchUpInside" id="T5J-BY-xDM"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kpY-sv-kLI">
-                                <rect key="frame" x="344" y="692" width="30" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="53C-fJ-bKg">
+                                <rect key="frame" x="182" y="772" width="50" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="30" id="2Qr-2D-goE"/>
-                                    <constraint firstAttribute="height" constant="30" id="fg5-0c-miI"/>
+                                    <constraint firstAttribute="width" constant="50" id="fIQ-Pu-cTT"/>
+                                    <constraint firstAttribute="height" constant="50" id="gGi-Li-bRF"/>
                                 </constraints>
-                                <state key="normal" image="Location"/>
+                                <state key="normal" image="GetDirection"/>
                                 <connections>
-                                    <action selector="centerViewInUserLocation" destination="MMA-9w-o3d" eventType="touchUpInside" id="PSR-Ek-gop"/>
+                                    <action selector="goButtonPressed" destination="MMA-9w-o3d" eventType="touchUpInside" id="cGU-rj-zVk"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -293,6 +304,7 @@
                             <constraint firstItem="dOC-7Z-NWy" firstAttribute="top" secondItem="v6K-OD-gLS" secondAttribute="bottom" constant="-217" id="DHU-xj-g3J"/>
                             <constraint firstItem="fiO-e1-XXj" firstAttribute="trailing" secondItem="v6K-OD-gLS" secondAttribute="trailing" constant="20" id="Jih-XC-A9R"/>
                             <constraint firstItem="zWO-EG-mJZ" firstAttribute="top" secondItem="fiO-e1-XXj" secondAttribute="top" constant="40" id="LJX-Gj-a0a"/>
+                            <constraint firstItem="53C-fJ-bKg" firstAttribute="centerX" secondItem="uyF-PD-qhb" secondAttribute="centerX" id="NH4-56-lRY"/>
                             <constraint firstItem="jzU-rx-HEA" firstAttribute="centerY" secondItem="uyF-PD-qhb" secondAttribute="centerY" constant="-20" id="WkB-Bn-CdI"/>
                             <constraint firstItem="1LX-lq-7p4" firstAttribute="centerX" secondItem="uyF-PD-qhb" secondAttribute="centerX" id="ZfS-iF-XAB"/>
                             <constraint firstItem="dOC-7Z-NWy" firstAttribute="top" secondItem="uyF-PD-qhb" secondAttribute="top" id="blr-au-tB4"/>
@@ -300,12 +312,14 @@
                             <constraint firstItem="v6K-OD-gLS" firstAttribute="leading" secondItem="fiO-e1-XXj" secondAttribute="leading" constant="20" id="evK-fW-Ko8"/>
                             <constraint firstItem="fiO-e1-XXj" firstAttribute="trailing" secondItem="zWO-EG-mJZ" secondAttribute="trailing" constant="40" id="gHZ-0b-4MA"/>
                             <constraint firstItem="dOC-7Z-NWy" firstAttribute="leading" secondItem="fiO-e1-XXj" secondAttribute="leading" id="jP1-Gv-1YW"/>
+                            <constraint firstItem="fiO-e1-XXj" firstAttribute="bottom" secondItem="53C-fJ-bKg" secondAttribute="bottom" constant="40" id="vxo-B2-zPi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fiO-e1-XXj"/>
                     </view>
                     <connections>
                         <outlet property="addressLabel" destination="v6K-OD-gLS" id="BFX-Ej-h7i"/>
                         <outlet property="doneButton" destination="1LX-lq-7p4" id="JO3-uf-pZL"/>
+                        <outlet property="goButton" destination="53C-fJ-bKg" id="jcm-A7-Nwe"/>
                         <outlet property="mapPinImage" destination="jzU-rx-HEA" id="zHJ-Uv-9nO"/>
                         <outlet property="mapView" destination="dOC-7Z-NWy" id="EAN-Qr-CcS"/>
                     </connections>
@@ -499,6 +513,7 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="AZ" width="25" height="24"/>
+        <image name="GetDirection" width="50" height="50"/>
         <image name="Location" width="128" height="128"/>
         <image name="Photo" width="195" height="196"/>
         <image name="Pin" width="42" height="42"/>
