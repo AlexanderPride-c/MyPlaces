@@ -235,15 +235,28 @@
                                     <action selector="closeVC" destination="MMA-9w-o3d" eventType="touchUpInside" id="tmX-yk-pDd"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kpY-sv-kLI">
+                                <rect key="frame" x="324" y="772" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="2Qr-2D-goE"/>
+                                    <constraint firstAttribute="height" constant="50" id="fg5-0c-miI"/>
+                                </constraints>
+                                <state key="normal" image="Location"/>
+                                <connections>
+                                    <action selector="centerViewInUserLocation" destination="MMA-9w-o3d" eventType="touchUpInside" id="PSR-Ek-gop"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="fiO-e1-XXj" firstAttribute="bottom" secondItem="kpY-sv-kLI" secondAttribute="bottom" constant="40" id="0Av-Uk-3sy"/>
                             <constraint firstItem="dOC-7Z-NWy" firstAttribute="trailing" secondItem="fiO-e1-XXj" secondAttribute="trailing" id="1Un-gN-WMV"/>
                             <constraint firstItem="zWO-EG-mJZ" firstAttribute="top" secondItem="fiO-e1-XXj" secondAttribute="top" constant="40" id="LJX-Gj-a0a"/>
                             <constraint firstItem="dOC-7Z-NWy" firstAttribute="top" secondItem="uyF-PD-qhb" secondAttribute="top" id="blr-au-tB4"/>
                             <constraint firstAttribute="bottom" secondItem="dOC-7Z-NWy" secondAttribute="bottom" id="ec0-2T-vPU"/>
                             <constraint firstItem="fiO-e1-XXj" firstAttribute="trailing" secondItem="zWO-EG-mJZ" secondAttribute="trailing" constant="40" id="gHZ-0b-4MA"/>
                             <constraint firstItem="dOC-7Z-NWy" firstAttribute="leading" secondItem="fiO-e1-XXj" secondAttribute="leading" id="jP1-Gv-1YW"/>
+                            <constraint firstItem="fiO-e1-XXj" firstAttribute="trailing" secondItem="kpY-sv-kLI" secondAttribute="trailing" constant="40" id="yck-iK-SOs"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fiO-e1-XXj"/>
                     </view>
@@ -439,6 +452,7 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="AZ" width="25" height="24"/>
+        <image name="Location" width="128" height="128"/>
         <image name="Photo" width="195" height="196"/>
         <image name="camcel" width="128" height="128"/>
         <image name="emptyStar" width="255" height="256"/>

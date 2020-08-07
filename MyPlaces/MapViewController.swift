@@ -15,6 +15,7 @@ class MapViewController: UIViewController {
     var place = Place()
     let annotationIdentifier = "annotationIdentifier"
     let locationManager = CLLocationManager()
+    let regionInMeters = 10_000.00
     
     @IBOutlet weak var mapView: MKMapView!
     
@@ -29,6 +30,16 @@ class MapViewController: UIViewController {
 
     @IBAction func closeVC() {
         dismiss(animated: true)
+    }
+    
+    @IBAction func centerViewInUserLocation() {
+         
+        if let location = locationManager.location?.coordinate {
+            let region = MKCoordinateRegion(center: location,
+                                            latitudinalMeters: regionInMeters,
+                                            longitudinalMeters: regionInMeters)
+            mapView.setRegion(region, animated: true)
+        }
     }
     
     private func setupPlacemark() {
@@ -66,7 +77,10 @@ class MapViewController: UIViewController {
             setupLocationManager()
             checkLocationAuthorization()
         } else {
-            // Show alert controller
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.showAlert(title: "Location Services are Disabled",
+                               message: "To enable it go: Settings -> Privacy -> Location Services and turn On")
+            }
         }
     }
     
@@ -81,7 +95,10 @@ class MapViewController: UIViewController {
             mapView.showsUserLocation = true
             break
         case .denied:
-            // Show alert controller
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.showAlert(title: "Your Loacation is not Available",
+                               message: "To give permission go to: Settings -> MyPlaces -> Location")
+            }
             break
         case .notDetermined:
             locationManager.requestWhenInUseAuthorization()
@@ -94,6 +111,15 @@ class MapViewController: UIViewController {
         @unknown default:
             print("New case is available")
         }
+    }
+    
+    private func showAlert(title: String, message: String) {
+        
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default)
+        
+        alertController.addAction(okAction)
+        present(alertController, animated: true)
     }
     
 }
