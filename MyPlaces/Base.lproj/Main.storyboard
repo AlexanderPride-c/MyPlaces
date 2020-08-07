@@ -121,7 +121,7 @@
                                                     </constraints>
                                                     <state key="normal" image="Placeholder"/>
                                                     <connections>
-                                                        <segue destination="MMA-9w-o3d" kind="presentation" identifier="getAdress" modalPresentationStyle="fullScreen" id="exR-Zu-4vn"/>
+                                                        <segue destination="MMA-9w-o3d" kind="presentation" identifier="getAddress" modalPresentationStyle="fullScreen" id="exR-Zu-4vn"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
